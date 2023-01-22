@@ -14,15 +14,7 @@
             v-for="(product) in $store.state.products.slice(0, 3)"
             :key="product.name"
           >
-            <v-card outlined>
-              <v-card-tite>{{ product.name }}</v-card-tite>
-              <v-card-subtitle>${{ product.price }}</v-card-subtitle>
-              <v-card-actions>
-                <v-btn color="success" outlined>
-                  Add to Cart
-                </v-btn>
-              </v-card-actions>
-            </v-card>
+            <VerticalProduct :product="product" />
           </v-col>
         </v-row>
       </v-col>
@@ -31,11 +23,11 @@
 </template>
 
 <script>
-// import VerticalProduct from '@/components/cards/VerticalProduct.vue'
+import VerticalProduct from '@/components/cards/VerticalProduct.vue'
 
 export default {
   components: {
-    // VerticalProduct
+    VerticalProduct
   },
   data() {
     return {}
