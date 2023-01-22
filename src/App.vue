@@ -9,7 +9,7 @@
       :multi-line="true"
       :right="true"
       :top="true"
-      :timeout="6000"
+      :timeout="2000"
       :color="$store.state.snackbar.variant"
     >
       {{ $store.state.snackbar.message }}
