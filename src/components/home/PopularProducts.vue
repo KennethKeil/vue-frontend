@@ -11,10 +11,10 @@
           <v-col
             sm="6"
             md="4"
-            v-for="(product) in $store.state.products.slice(0, 3)"
+            v-for="(product, i) in $store.state.products.slice(0, 3)"
             :key="product.name"
           >
-            <VerticalProduct :product="product" :addToCart="addToCart"/>
+            <VerticalProduct :product="product" :i="i" :addToCart="addToCart" />
           </v-col>
         </v-row>
       </v-col>
