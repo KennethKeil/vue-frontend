@@ -14,7 +14,7 @@
             v-for="(product) in $store.state.products.slice(0, 3)"
             :key="product.name"
           >
-            <VerticalProduct :product="product" />
+            <VerticalProduct :product="product" :addToCart="addToCart"/>
           </v-col>
         </v-row>
       </v-col>
@@ -34,8 +34,8 @@ export default {
   },
   methods: {
     addToCart(index, quantity = 1) {
-      this.addItemToCart({ itemId: index, quantity })
-      this.updateSnackbar({ show: true })
+      this.$store.commit('addItemToCart', { itemId: index, quantity })
+      this.$store.commit('updateSnackbar', { show: true })
     }
   }
 }

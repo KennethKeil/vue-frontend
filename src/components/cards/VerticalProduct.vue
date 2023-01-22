@@ -1,9 +1,9 @@
 <template>
   <v-card outlined>
-    <v-card-tite>{{ product.name }}</v-card-tite>
+    <v-card-title>{{ product.name }}</v-card-title>
     <v-card-subtitle>${{ product.price }}</v-card-subtitle>
     <v-card-actions>
-      <v-btn color="success" outlined>
+      <v-btn @click="addToCart" color="success" outlined>
         Add to Cart
     </v-btn>
     </v-card-actions>
